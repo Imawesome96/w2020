@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var mySlider = $("#slider").bxSlider({
+				auto:true,   //슬라이드자동
+				//mode:"fade", //슬라이드방향 
+				controls:false, //좌우측 버튼 사용 안함 
+				pager:false  //이동버튼 사용 안함 
+			});
+
+			$(".prebtR").click(function(){
+				mySlider.goToNextSlide();
+			});
+			$(".prebtL").click(function(){
+				mySlider.goToPrevSlide();
+			});
+
+
+		});
+	</script>
+	<style>
+		#sliderWrap{width: 1200px;margin: 0 auto;position: relative;}
+		#slider img{width: 100%;}
+		.prebtR,.prebtL{position: absolute;top: 50%;margin-top: -50px;cursor: pointer;}
+		.prebtL{left: 10px;}
+		.prebtR{right: 10px;}
+	</style>
+</head>
+<body>
+	<div id="sliderWrap">
+		<ul id="slider">
+			<!-- li*3>img[images/pc0$.jpg] -->
+			<li><img src="images/img01.jpg" alt=""></li>
+			<li><img src="images/img02.jpg" alt=""></li>
+		</ul>
+		<div class="prebtR">
+			<img src="images/prebtR.png" alt="" width="60px">
+		</div>
+		<div class="prebtL">
+			<img src="images/prebtL.png" alt="" width="60px">
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+<!-- #=id -->
+<!-- .=class -->

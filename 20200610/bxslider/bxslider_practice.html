@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>bxslider practice</title>
+</head>
+<style>
+	*{margin: 0;padding: 0;box-sizing: border-box;}
+	a:link,a:visited{color: black;text-decoration: none;}
+	li{list-style: none;}
+
+	/*header*/
+	div.mainhd{width: 500px;height: 90px; background-color: #EAEAEA; margin: 0 auto;text-align: center;line-height: 80px;}
+	div.mainhd>h1.main{color: #5D5D5D}
+
+	/*menu*/
+	nav.gnbmenu{background-color: gray;}
+	nav.gnbmenu>ul{width: 980px;margin: 0 auto;}
+	nav.gnbmenu>ul:after{content: "";clear: both;display: block;}
+	nav.gnbmenu>ul>li{float: left; width: 33.3333%;border-right: 1px solid black;}
+	nav.gnbmenu>ul>li:nth-child(1){border-left: 1px solid black}
+	nav.gnbmenu>ul>li{color: white; display: block;text-align: center;font-weight: bold;}
+	nav.gnbmenu>ul>li>a{display: block;}
+	nav.gnbmenu>ul>li>a:hover{background-color: #005C00; font-weight: bold}
+</style>
+
+	<!-- visual -->
+<link rel="stylesheet" href="css/jquery.bxslider.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
+
+<style>
+	div.visual{width: 980px;height: 600px;margin: 0 auto;}
+	div.visual>ul>li>img:{margin: 0 auto}
+</style>
+
+<script>
+	$(document).ready(function(){
+	$(".slider").bxSlider({auto:true,mode:"fade"});
+	});
+</script>	
+
+<body>
+	<div class="mainhd">
+		<h1 class="main">Super Carz</h1>
+	</div>
+
+	<nav class="gnbmenu">
+		<ul>
+			<li><a href="https://www.bentleymotors.com/en.html">Bentley</a></li>
+			<li><a href="https://www.lamborghini.com/en-en">Lamborghini</a></li>
+			<li><a href="https://www.ferrari.com/en-KR">Ferrari</a></li>
+		</ul>
+	</nav>
+
+	<div class="visual">
+		<ul class="slider">
+			<li><img src="l.jpg" alt="Lamborghini"></li>
+			<li><img src="b.jpg" alt="Bentley"></li>
+			<li><img src="f.jpg" alt="Ferrari"></li>
+		</ul>
+	</div>
+</body>
+</html>

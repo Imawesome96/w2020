@@ -1,0 +1,102 @@
+@charset "utf-8";
+/*reset*/
+*{margin: 0;padding: 0;box-sizing: border-box;}
+a:link,a:visited{color: black; text-decoration: none;}
+li{list-style: none;}
+.clearfix:after{content:"";display: block;clear: both;}
+
+/*header*/
+div.headerTop{width: 980px;
+	          height: 75px;
+	          margin:0 auto;
+	          position: relative;}
+div.headerTop>h1.logo{text-align: center;
+                      line-height: 75px;}
+div.headerTop>div.toggle{width: 50px;height: 50px;border: 1px solid #ddd;position: absolute;right: 0;
+	                     top: 13px;cursor: pointer;}
+div.headerTop div.box1,
+div.headerTop div.box2,
+div.headerTop div.box3{width: 20px;height: 3px;background-color: #666;position: absolute;border-radius:2px;}
+div.headerTop div.box1{top: 15px;left: 15px;}
+div.headerTop div.box2{top: 23px;left: 15px;}
+div.headerTop div.box3{top: 31px;left: 15px;}
+
+div.gnbWrap{background-color: #2e559f;}
+div.gnbWrap>nav.GlobalNavigationBarMenu{width: 980px;margin: 0 auto;}
+div.gnbWrap>nav.GlobalNavigationBarMenu>ul:after{content:""; display: block;clear: both;}  /*2)after값 넣어주기*/
+div.gnbWrap>nav.GlobalNavigationBarMenu>ul>li{float: left; width: 163.333px;box-sizing: border-box;
+	                                          border-right:1px solid white;} /*1)li부터적용*/  /*float나오면 디블과클보해주기*/ 
+div.gnbWrap>nav.GlobalNavigationBarMenu>ul>li>a{color:white;display: block;text-align: center;
+	                                            height: 45px; line-height:45px;}
+div.gnbWrap>nav.GlobalNavigationBarMenu>ul>li:nth-child(1){border-left: 1px solid white}
+div.gnbWrap>nav.GlobalNavigationBarMenu>ul>li>a:hover{background-color: #233e6f;}
+
+
+/*(sky+lightbulb)visualWrap*/
+.visualWrap{height: 400px;background-color:/*orange */#233e6f;
+			background-image: url(../images/bg02.jpg);
+			background-repeat: no-repeat;background-position: center;}
+div.visualWrap>div.visual{width: 980px;height: 400px;_background-color: skyblue;margin: 0 auto;
+	                      position:relative;overflow: hidden;}
+div.visual>img.light{position: absolute; right: -20px; top: 50px;}
+div.visual>img.vtitle{position: absolute;left: 0;top: 100px;}
+
+
+/*icon section*/
+div.section{/*height: 195px;*/background-color: #eee; margin-bottom: 25px;}
+div.section ul.card{width: 980px;margin: 0 auto;}
+div.section ul.card:after{content:"";clear: both;display: block;}
+div.section ul.card>li{width: 20%; float:left; height: 195px;
+	                   text-align: center;color: white; padding: 20px;}
+div.section ul.card>li:nth-child(1){background-color: #7c99b9;}
+div.section ul.card>li:nth-child(2){background-color: #4f74a1;}
+div.section ul.card>li:nth-child(3){background-color: #4b8ce0;}
+div.section ul.card>li:nth-child(4){background-color: #3db5f3;}
+div.section ul.card>li:nth-child(5){background-color: #95c8ff;}
+div.section ul.card>li>img{margin-bottom: 15px;}
+div.section ul.card>li>p{font-size: 12px;}
+div.section ul.card>li>h3{margin-bottom: 8px;}
+
+/*head menu*/
+div.utilWrap{border-bottom: 1px solid gray;/*width: 980px;margin: 0 auto*/}
+div.util{width: 980px;margin: 0 auto; _background-color: #EDEDED;}
+ul.utilmenu{margin-left:auto; width: 280px;}
+ul.utilmenu>li{float: left;position: relative;}
+ul.utilmenu>li:after{content:"";display: block;width: 1px;height: 10px;background-color: #000;
+                     position: absolute;top: 10px;right: 0;}
+ul.utilmenu>li:last-child:after{content: "";display: none}
+ul.utilmenu>li>a{display: block;padding: 0 10px; line-height: 30px;}
+
+/*(pictures)conWrap1*/
+div.conWrap1{width: 980px;margin: 0 auto;}
+div.conWrap1 ul.card{}
+div.conWrap1 ul.card>li{float: left;width: 310px;margin-right: 25px;cursor: pointer;}
+div.conWrap1 ul.card>li:last-child{margin-right: 0;}
+div.conWrap1 img.cardimg{display: block;}
+div.conWrap1 div.cardBody{padding: 20px;border: 1px solid #DDD;border-top: none;color: #9b9b9b}
+div.conWrap1 h3{margin-bottom: 7px;color: #626262}
+
+/*conWrap2*/
+div.conWrap2{width: 980px;margin: 0 auto;margin-top: 25px; margin-bottom: 25px;}
+div.conWrap2 ul.card>li{float: left;width: 310px;margin-right: 25px;
+						border: 1px solid #ddd; padding: 20px ;position: relative;color: #626262}
+div.conWrap2 ul.card>li:last-child{margin-right: 0;}
+div.conWrap2 div.card_body{width: 150px;position: relative;}
+div.conWrap2 img{position: absolute;top: 30px;right: 10px;}
+div.conWrap2 h3{margin-bottom: 7px;color: #626262}
+div.conWrap2 p{margin-bottom: 10px;}
+div.conWrap2 a{font-size: 14px; color: #4b8ce0;}
+
+/*Footer*/
+footer#footer{background-color: #5e5e5e;}
+.footerTopWrap{background-color: #4d4d4d;}
+.footerTop{width: 980px;margin: 0 auto;overflow: hidden;position: relative;}
+.footerTop li{float: left;position: relative;}
+.footerTop li:after{content:"";display: block;width: 1px;height: 16px;background-color: #fff;position: absolute;top: 13px;left: -1px;}
+.footerTop li a{display: block;padding: 0 20px; color: white;line-height: 40px;}
+.footerTop li:first-child a{padding-left: 0;}
+.footerTop .top{width: 40px;height: 40px;background-color: #404040;position: absolute;right: 0;top: 0;}
+
+.footerBtWrap{width: 980px;margin: 0 auto;color: white;padding: 20px 0;}
+.footerBtWrap .logo{float: left;width: 200px;font-size: 20px;font-weight: bold;}
+.footerBtWrap .copy{float: left;}

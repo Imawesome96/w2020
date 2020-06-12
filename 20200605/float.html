@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		/*Reset*/
+		{padding: 0; margin: 0;}
+		body{background-image: url(../images/bg_grid.gif);}
+		.wrap{background-color:red;
+			  width: 200px;}	/*p=%*/
+ 			  .box1{float: left;}
+ 			  .box2{float: left;}
+ 			  .clear{clear: both;}
+ 			  .test{width: 100px;height: 100px; background-color: #f0f;}
+ 			  .after{width: 200px;height: 200px;background-color: skyblue;}
+ 			  .after:after{content: "Hello";}
+ 			  .after:before{content: "Patrick";}
+ 			  .wrap:after{content: "";display: block;clear: both;}
+
+			  div.wrap>div.box1{width: 100px;
+			  	                height: 100px;
+			  	                background-color: #ff0;
+			  	                float: left;
+
+			  	                }  
+			  div.wrap>div.box2{width: 100px;
+			  	                height: 100px;
+			  	                background-color: #0ff;
+			  	                float: left;
+			                    }                     							
+		/*	  ctrl+화살표 하면 숫자 오르내림.*/
+
+		div.wrap>div.clear{clear:both;} 		/*clear both란 무엇인가...what the fuck*/
+
+	.testImg{width: 200px;height: 200px;
+	         float: left;}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+<!-- 		div.box$*2>{box$} -->
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+		<div class="clear">clear</div>
+	</div>
+
+	<div class="test"></div>
+	<div class="after">center</div>
+
+</body>
+</html>
