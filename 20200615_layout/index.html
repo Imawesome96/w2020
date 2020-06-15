@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/style_0615.css">
+	<style>
+		body{background-image:url(../images/bg_grid.gif);}
+		.boxWrap{width: 410px;_height: 210px;background-color:orange;}
+		.boxWrap .box1, .boxWrap .box2{width: 200px;height: 200px;color: white;float: left;}
+		.boxWrap .box1{background-color: magenta;}
+		.boxWrap .box2{background-color: skyblue;}
+		.box3{height: 200px;background-color: pink;_display: none;}
+		.boxWrap .clear{height: 10px;clear: both;}
+
+		/*.boxWrap:after{content: "";clear: both;display: block;}*/
+		.clearfix:after{content: "";clear: both;display: block;}
+		.box3:after{content: "입니다";display: block;}
+		.box3:before{content: "핑크는";display: block;}
+	</style>
+</head>
+<body>
+	<div class="boxWrap clearfix">
+		<div class="box1">box1</div>
+		<div class="box2">box2</div>
+<!-- 		<div class="clear"></div> -->
+	</div>
+
+	<div class="box3">box3</div>
+
+<style>
+	.gray{background-color: #999;}
+	.red{background-color: red;}
+	.skyblue{background-color: skyblue;}
+
+	.wrap1{width: 1000px;margin: 10px auto;}
+	.wrap1 .left,.wrap1 .right{width: 100px;height: 100px;}
+	.wrap1 .left{float: left;}
+	.wrap1 .right{float: right;}
+</style>
+
+	<h3>1.float</h3>
+	<div class="wrap1 red clearfix">
+		<div class="left gray">left</div>
+		<div class="right skyblue">right</div>
+	</div>
+
+<style>
+	.wrap2{width: 1000px;margin: 0 auto}
+	.wrap2 li{float: left;width: 20%}
+	.wrap2 li>a{display: block;text-align: center;line-height: 40px;color: white}
+	.wrap2 li>a:hover{background-color: #333;color: white}
+</style>
+
+	<h3>2.float nav</h3>
+	<div class="wrap2 gray">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</div>
+
+<style>
+	.logo{width: 1000px;margin: 0 auto; _background-color: #999;text-align: center;font-weight: bold;}
+	.table li{float: left;width: 20%;}
+	.table{background-color: #777;width: 1000px;margin: 0 auto}
+	.table{margin-top: 25px;}
+	.table li>a{display: block;text-align: center;margin: 0 auto;line-height: 40px;color: white}
+	.table li>a:hover{background-color: #999;font-weight: bold;}
+</style>
+
+	<h3>3.header</h3>
+	<div class="logo">LOGO</div>
+
+	<div class="bigbox">
+		<div class="table">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</div>
+	</div>
+
+<style>
+	.logo{width: 1000px;margin: 0 auto; _background-color: #999;text-align: center;font-weight: bold;}
+	.table li{float: left;width: 20%;}
+	.table{background-color: #777;width: 1000px;margin: 0 auto}
+	.table{margin-top: 25px;}
+	.table li>a{display: block;text-align: center;margin: 0 auto;line-height: 40px;color: white}
+	.table li>a:hover{background-color: #999;font-weight: bold;}
+	.VS{width: 100%;height: 300px;background-color: skyblue;margin: 0 auto;position: relative;margin-top: 10px;margin-bottom: 10px;}
+	.Visual{width: 100px;color: white;margin: 10px auto;position: absolute;font-size: 2em;text-align: center;margin: 0 auto;top: 100px;left: 50%;margin-left:-50px ;}
+	.twoboxes{width: 1000px;background-color: #777;margin: 0 auto;}
+	.aside{width: 40%;height: 200px;color: black;float: left;}
+	.content{width: 60%;height: 200px;color: black;float: left;}
+	.aside{background-color: skyblue;position: relative;}
+	.content{background-color: pink;position: relative;}
+	.twoboxes .clear{clear: both;}
+	.twoboxes .aside .txtaside{position: absolute;left: 50%;margin-left: -50px;color: white;font-size: 1.5em;top: 50%;}
+	.twoboxes .content .txtcontent{position: absolute;left: 50%;margin-left: -50px;color: white;font-size: 1.5em;top: 50%;}
+	.footer{background-color: gray;width: 1000px;margin: 0 auto;text-align: center;color: white;margin-top: 10px;line-height: 50px;}
+</style>
+
+	<h3>4.float mainpage layout</h3>
+	<header>
+		<div class="logo">LOGO</div>
+		<div class="bigbox">
+			<div class="table">
+				<ul class="clearfix">
+					<li><a href="#">menu1</a></li>
+					<li><a href="#">menu2</a></li>
+					<li><a href="#">menu3</a></li>
+					<li><a href="#">menu4</a></li>
+					<li><a href="#">menu5</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="VS">
+		<nav class="Visual">Visual<br> Slider</nav>	
+	</div>
+
+	<div class="twoboxes clearfix">
+		<div class="aside"><nav class="txtaside">aside</nav></div>
+		<div class="content"><nav class="txtcontent">content</nav></div>
+	</div>
+
+	<footer>
+		<div class="footer">footer</div>
+	</footer>
+
+</body>
+</html>
+
+
+<!-- 		.boxWrap{width: 410px;_height: 210px;background-color:orange;}
+		.boxWrap .box1, .boxWrap .box2{width: 200px;height: 200px;color: white;float: left;}
+		.boxWrap .box1{background-color: magenta;}
+		.boxWrap .box2{background-color: skyblue;}
+		.box3{height: 200px;background-color: pink;_display: none;}
+		.boxWrap .clear{height: 10px;clear: both;} -->
