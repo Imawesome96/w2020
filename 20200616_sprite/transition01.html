@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="../css/reset_0615.css">
+	<style>
+		.box1{width: 300px;height: 300px;border: 1px solid #000;box-sizing: content-box;position: relative;overflow: hidden;}
+		.box1 img{display: block;}
+		.overlay1{width: 300px;height: 300px;background-color:rgba(0,0,0,.2);position:absolute;transition: .1s;color: white;right: -300px;top: 0;}
+		.box1:hover .overlay1{right: 0;}
+		.box1 .txt1{line-height: 300px;text-align: center;}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<img src="../images/testimg.jpg" alt="#">
+		<div class="overlay1">
+			<div class="txt1">Lorem ipsum.</div>
+		</div>
+	</div>
+<!-- ---------------------------------------------------------------- -->
+<style>
+	.bgOne{/*background-color: skyblue;background-image: url(../images/pc01.jpg);
+	   background-repeat:no-repeat;background-position: center;
+	   -webkit-background-size: cover;
+	   background-size: cover;background-attachment: fixed;*/
+	   background:skyblue url(../images/pc01.jpg) no-repeat center fixed;
+	   -webkit-background-size: cover;
+	   background-size: cover;}
+
+	.container1{width: 1200px;margin: 0 auto;padding: 20px 0;}
+	.container1 h2{text-align: center;color: white}
+	.container1 h2:after{content:"";display: block;width: 300px;height: 2px;
+						background-color: #888;margin: 10px auto}
+	.container1 p{text-align: center;color: white}
+	.container1 .hdT{margin-bottom: 20px;}
+	.container1 ul.content li{float: left;width: 281.25px;margin-right: 25px;position:relative;overflow: hidden;border-radius: 140px 0 140px 0}
+	.container1 ul.content .overlay{width: 281.25px;height: 281.25px;
+								   background-color: rgb(0,0,255,.5);position:
+								   absolute;transition: .1s;transition-delay:.2s;top:300px;}
+	.container1 ul.content li:hover .overlay{top:0;}
+	.container1 ul.content li img{width: 100%;}
+	.container1 ul.content li:last-child{margin-right: 0;}
+	.container1 li .txt{text-align: center;line-height: 281.25px;color: white;
+						font-weight: bold;font-size: 2.1em}
+
+	.bgTwo{background:skyblue url(../images/pc02.jpg) no-repeat 
+		   center fixed;
+		   -webkit-background-size: cover;
+		   background-size: cover;}
+
+	.container2{width: 1200px;margin: 0 auto;padding: 20px 0;}
+	.container2 h2{text-align: center;color: white}
+	.container2 h2:after{content:"";display: block;width: 300px;height: 2px;
+						background-color: #888;margin: 10px auto}
+	.container2 p{text-align: center;color: white}
+	.container2 .hdT{margin-bottom: 20px;}
+	.container2 ul.content li{float: left;width: 281.25px;margin-right: 25px;position:relative;overflow: hidden;border-radius: 141px}
+	.container2 ul.content .overlay{width: 281.25px;height: 281.25px;
+								   background-color: rgb(0,150,0,.5);position:
+								   absolute;transition: .3s;transition-delay:.5s;right:-250px;top: 0}
+	.container2 ul.content li:hover .overlay{right:0;}
+	.container2 ul.content li img{width: 100%;}
+	.container2 ul.content li:last-child{margin-right: 0;}
+	.container2 li .txt{text-align: center;line-height: 281.25px;color: white;
+						font-weight: bold;font-style: italic;font-size: 2em}
+
+
+	.bgThree{background:skyblue url(../images/pc03.jpg) no-repeat center fixed;
+		   -webkit-background-size: cover;
+		   background-size: cover;}
+	.container3{width: 1200px;margin: 0 auto;padding: 20px 0;}
+	.container3 h2{text-align: center;color: white}
+	.container3 h2:after{content:"";display: block;width: 300px;height: 2px;
+						background-color: #888;margin: 10px auto}
+	.container3 p{text-align: center;color: white}
+	.container3 .hdT{margin-bottom: 20px;}
+	.container3 ul.content li{float: left;width: 281.25px;margin-right: 25px;position:relative;overflow:hidden;}
+	.container3 ul.content .overlay{width: 281.25px;height: 281.25px;
+								   background-color: rgb(300,150,20,.4);position:
+								   absolute;transition: .3s;top: -250px}
+	.container3 ul.content li:hover .overlay{top:0;}
+	.container3 ul.content li img{width: 100%;}
+	.container3 ul.content li:last-child{margin-right: 0;}
+	.container3 li .txt{text-align: center;color: white; 
+						font-weight: bold;font-size: 1.2em;}
+	.container3 li .txt>p{color: black}
+</style>
+
+
+<div class="conWrap bgOne">
+	<div class="container1">
+		<div class="hdT">
+			<h2>GALLERY</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, harum.</p>
+		</div>
+		<ul class="content clearfix">
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">안녕하세요</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">제 이름은</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">안</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">성현입니다.</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="conWrap bgTwo">
+	<div class="container2">
+		<div class="hdT">
+			<h2>GALLERY</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, harum.</p>
+		</div>
+		<ul class="content clearfix">
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="conWrap bgThree">
+	<div class="container3">
+		<div class="hdT">
+			<h2>GALLERY</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, harum.</p>
+		</div>
+		<ul class="content clearfix">
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt">Lorem ipsum.</div>
+				</div>
+			</li>
+			<li>
+				<img src="../images/testimg.jpg" alt="#">
+				<div class="overlay">
+					<div class="txt"><br><br><br><br><br><p>Lorem ipsum<br>dolor sit amet.</p><br><br><br>
+					Lorem ipsum.</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>
