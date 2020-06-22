@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Animate CSS</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<style>
+		.box{width: 500px;height: 130px;/*background: skyblue;*//*position: absolute;
+			top: 50%;margin-top: -56px;left: 50%;margin-left: -250px;*/text-align: center;}
+		.box h1{color: pink}
+
+		.gap{height: 2000px;}
+		.wrap{padding: 50px 0;}
+		.container{width: 1000px;margin: 0 auto}
+		.container ul li{float: left;margin-right: 25px;width:231.25px;height: 231.25px;background: orange;border-radius: 30px;text-align: center;color: white;line-height: 231.25px;font-weight: bold;font-size: 2em}
+		.container ul li:last-child{margin-right: 0;}
+		.gray{background: #ddd;}
+		.circle{border-radius: 120px !important;}
+	</style>
+</head>
+<body>
+	<div class="box animated heartBeat"><h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1></div>
+
+	<div class="gap"></div>
+
+	<div class="wrap gray">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="circle wow zoomIn"data-wow-delay="0">Lorem</li>
+				<li class="wow zoomInDown" data-wow-delay=".1s">Temporibus</li>
+				<li class="circle wow zoomInLeft" data-wow-delay="0.2s">Repellendus</li>
+				<li class="wow zoomInUp" data-wow-delay="0.3s">Amet</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="circle wow wobble" data-wow-delay="0.5s">Lorem</li>
+				<li class="wow wobble" data-wow-delay="0.7s">Temporibus</li>
+				<li class="circle wow wobble" data-wow-delay="1s">Repellendus</li>
+				<li class="wow wobble" data-wow-delay="0.2s">Amet</li>
+			</ul>
+		</div>
+	</div>
+	<div class="wrap gray">
+		<div class="container">
+			<ul class="clearfix">
+				<li class="circle wow flip" data-wow-delay="1s">Lorem</li>
+				<li class="wow flipInX" data-wow-delay="2s">Temporibus</li>
+				<li class="circle wow flipInY" data-wow-delay="3s">Repellendus</li>
+				<li class="wow flipOutX" data-wow-delay="4s">Amet</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>
