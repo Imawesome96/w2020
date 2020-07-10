@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>function</title>
+	<script>
+		function GUGU(x){
+			// var x=2;
+			// document.write(x+'x1='+x*1+'<br>');
+			// document.write(x+'x2='+x*2+'<br>');
+			// document.write(x+'x3='+x*3+'<br>');
+			// document.write(x+'x4='+x*4+'<br>');
+			// document.write(x+'x5='+x*5+'<br>');
+			// document.write(x+'x6='+x*6+'<br>');
+			// document.write(x+'x7='+x*7+'<br>');
+			// document.write(x+'x8='+x*8+'<br>');
+			// document.write(x+'x9='+x*9+'<br>');
+			// for(var i=1;i<=9;i++){
+			// 	document.write(x+'x'+i+'='+x*i+'<br>')
+			// }
+		}
+
+		var result;
+		function add(x,y){
+			var x=10;
+			var y=20;
+			var sum=0;
+
+			sum=x*y;
+			//document.write(sum);
+			return sum;
+		}
+
+	</script>
+</head>
+<body>
+<!-- 	<div class="box">
+		<script>
+			GUGU(9);
+		</script>
+	</div> -->
+	<button type="button" onclick="GUGU(9)">구구구단</button>
+	<div onclick="GUGU(5)">구구오단</div>
+	<a href="#" onclick="GUGU(10)">구구씹단</a>
+	<a href="javascript:GUGU(50)">구구오씹단</a>
+	<br>
+	<script>
+		result=add(10,20)
+		document.write('곱한값은 '+result+'입니다.')
+	</script>
+
+
+</body>
+</html>

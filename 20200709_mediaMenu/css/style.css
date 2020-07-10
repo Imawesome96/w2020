@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.topNav{background-color: #555}
+.topNav a{display: block;color: white;float: left;padding: 14px 16px;}
+.topNav a.toggle{float:right;}
+.topNav a.toggle{display: none;}
+
+@media screen and (max-width: 576px){
+	.menuWrap{width: 100%;position: fixed}
+	.topNav a:not(:first-child){display: none;}
+	.topNav a.toggle{display: block;}
+	.topNav.responsive a{float: none;display: block;}
+	.topNav.responsive a.toggle{position: absolute;right: 0;top: 0;}
+}
+
+@media screen and (min-width: 577px) and (max-width:922px){
+	.menuWrap{width: 100%;}
+}
+
+@media screen and (min-width: 923px){
+	.menuWrap{width: 1200px;position:fixed;left: 50%;transform: translateX(-50%);}
+	
+}
