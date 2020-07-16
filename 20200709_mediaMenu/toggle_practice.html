@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/all.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				var toggle=$(this).attr("class");
+				if(toggle=="toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$(".cover").stop().animate({top:0},900);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$(".cover").stop().animate({top:"-100%"},900);
+				}
+			})
+		})
+	</script>
+	<style>
+		.cover{width: 100%;height: 100%;background-color: crimson;position: fixed;top:-100%}
+		.cover .ASH{color: white;width: 100%;height: 100%;transform: translate(50%,50%);}
+		.menuWrap{width: 1200px;_background: green;margin: 0 auto;position: relative;line-height: 45px;}
+		.menuWrap h3{width: 100px;height: 45px;}
+		.menuWrap ul{position: absolute;right: 20px;top: 0;}
+		.menuWrap ul li{float: left;width: 100px;}
+		.menuWrap ul li a{display: block;}
+		.toggleMenu{width: 30px;height: 33px;border: 1px solid black;position: absolute;top: 6px;right: 6px;}
+		.toggleMenu>div{width: 22px;height: 3px;background-color: black;border-radius: 11px;position: absolute;transition: 0.5s}
+		.toggleMenu .box1{top: 8px;left: 2px;}
+		.toggleMenu .box2{top: 14px;left: 2px;}
+		.toggleMenu .box3{top: 20px;left: 2px;}
+
+		.change .box1{transform:rotate(-45deg);top: 50%;}
+		.change .box2{opacity: 0}
+		.change .box3{transform:rotate(45deg);top: 50%;}
+	</style>
+</head>
+<body>
+	<div class="cover">
+		<h1 class="ASH">A<br>S<br>H</h1>
+	</div>
+	<div class="menuWrap">
+		<h3><a href="#">ASH</a></h3>
+		<ul class="clearfix">
+			<li><a href="#">Company</a></li>
+			<li><a href="#">Product</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		<div class="toggleMenu">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+		</div>
+	</div>
+</body>
+</html>
