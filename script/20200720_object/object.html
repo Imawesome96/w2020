@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Object</title>
+	<style>
+		#var1{color: crimson}
+	</style>
+</head>
+<body>
+
+<div id="var1"></div>
+<div id="var2"></div>
+	<script>
+		var car=["Sonata",100,"White",4];
+		document.write('자동자의 이름 : '+car[0]+"<br>");
+
+		var carOne={
+			name:"Carnival", //속성
+			speed:100,
+			color:"red",
+			start:function(){  //method
+				return this.speed+150
+			}
+		};
+		document.write('자동자의 이름 : '+ carOne.name+"<br>");
+		document.write("자동차의 속도 : "+ carOne.start()+"<br>");
+		document.write("자동차의 색상 : "+ carOne["color"]);
+		document.getElementById("var1").innerHTML='<h3>자동자의 이름 : '+ carOne.name+"</h3>";
+		document.getElementById("var2").innerHTML='<h3>자동자의 속도 : '+ carOne.start();+"</h3>";
+	</script>
+
+
+</body>
+</html>

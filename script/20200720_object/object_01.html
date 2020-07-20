@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>object</title>
+</head>
+<body>
+	<div id="carname"></div>
+	<div id="carcolor"></div>
+	<div id="carspeed"></div>
+	<script>
+		var car={
+			name:"Bentley",
+			speed:300,
+			color:"Gold",
+			start:function(){
+				return this.speed+30;
+			}
+		}
+		document.getElementById("carname").innerHTML=car.name;
+		document.getElementById("carcolor").innerHTML=car.color;
+		document.getElementById("carspeed").innerHTML=car.start();
+	</script>
+</body>
+</html>

@@ -18,10 +18,37 @@
 					$(".toggleMenu").removeClass("change");
 					$(".cover").stop().animate({top:"-100%"},900);
 				}
-			})
+			});
+			$(".view01").click(function(){
+				//var num=$(".contact").attr("class");
+				// if(num=="contact"){
+					$(".contact").stop().animate({right:0},900);
+				// }
+			});
+			$(".close").click(function(){
+				
+				// if(num=="contact"){
+					$(".contact").stop().animate({right:"-100%"},900);
+				// }
+			});
+			$(".view02").click(function(){
+				//var num=$(".contact").attr("class");
+				// if(num=="contact"){
+					$(".product").stop().animate({left:0},900);
+				// }
+			});
+			$(".closePro").click(function(){
+				//var num=$(".contact").attr("class");
+				// if(num=="contact"){
+					$(".product").stop().animate({left:"-100%"},900);
+				// }
+			});
 		})
 	</script>
 	<style>
+		.product{width: 100%;height: 100%;background-color: gray;position: fixed;left: -100%;}
+		/*.product>a{right: 0;position: absolute;}*/
+		.contact{width: 100%;height: 100%;background-color: lime;position: fixed;right:-100%;}
 		.cover{width: 100%;height: 100%;background-color: crimson;position: fixed;top:-100%}
 		.cover .ASH{color: white;width: 100%;height: 100%;transform: translate(50%,50%);}
 		.menuWrap{width: 1200px;_background: green;margin: 0 auto;position: relative;line-height: 45px;}
@@ -41,6 +68,8 @@
 	</style>
 </head>
 <body>
+	<div class="product"><a href="#" class="closePro">X</a></div>
+	<div class="contact"><a href="#" class="close">X</a></div>
 	<div class="cover">
 		<h1 class="ASH">A<br>S<br>H</h1>
 	</div>
@@ -48,8 +77,8 @@
 		<h3><a href="#">ASH</a></h3>
 		<ul class="clearfix">
 			<li><a href="#">Company</a></li>
-			<li><a href="#">Product</a></li>
-			<li><a href="#">Contact</a></li>
+			<li class="view02"><a href="#">Product</a></li>
+			<li class="view01"><a href="#">Contact</a></li>
 		</ul>
 		<div class="toggleMenu">
 			<div class="box1"></div>
