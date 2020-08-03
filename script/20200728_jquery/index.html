@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+	<p>1. Lorem ipsum dolor.</p>
+	<p>2. Maxime, reiciendis, aspernatur.</p>
+	<p>3. Accusamus, ducimus aperiam?</p>
+	<p>4. Voluptatum iste, molestias!</p>
+	<p>5. Quidem, cupiditate, numquam.</p>
+	<p>6. Eligendi, natus, nam!</p>
+	<p>7. Ab, numquam quibusdam.</p>
+	<p>8. Quibusdam, nihil, nulla.</p>
+	<p>9. Ea, nostrum, animi!</p>
+	<p>10. Placeat, asperiores facilis.</p>
+
+	<button type="button" class="btn_show">Button1</button>
+	<button type="button" class="btn_hide">Button2</button>
+	<script>
+		// var tagP=document.getElementsByTagName("p");
+		// for(var i=0;i<tagP.length;i++){
+		// 	tagP[i].style.display="none";
+		// }
+		$(document).ready(function(){
+			//$("p").hide();
+			//$("p").eq(0).hide();
+
+			//var plen=
+			//console.log($("p").length)
+
+			var plen=$("p").length;
+			console.log(plen);
+			for(var i=0;i<plen;i++){
+				//$("p").eq(i).hide();
+				$("p").eq(i).css("color","blue").css("background","green").css("font-size","1.3em")
+			}
+
+			//$(선택자).on("click",function(){});
+			//$(선택자).click(function(){});
+			//dom.addEventListener("click",function(){});
+			$(".btn_hide").click(function(){
+				$("p").slideUp();
+			});
+			$(".btn_show").click(function(){
+				$("p").slideDown();
+			});
+		});
+	</script>
+
+<style>
+	ul>li{float: left;width: 100px;background: aqua;margin-right: 10px;text-align: center;line-height: 40px;cursor:pointer;}
+	.Wrap{width: 400px;border: 1px solid #000;}
+	.box1,.box2,.box3{width: 400px;padding: 20px;}
+</style>
+<script>
+	$(document).ready(function(){
+		$(".box2,.box3").hide();
+		$("ul>li").eq(0).click(function(){
+			$(".box1").show();
+			$(".box2").hide();
+			$(".box3").hide();
+		});
+		$("ul>li").eq(1).click(function(){
+			$(".box1").hide();
+			$(".box2").fadeIn();
+			$(".box3").hide();
+		});
+		$("ul>li").eq(2).click(function(){
+			$(".box1").hide();
+			$(".box2").hide();
+			$(".box3").show();
+		});
+	});
+</script>
+	<ul class="clearfix">
+		<li>menu1</li> <!-- $("ul>li").eq(0).click(function(){}); -->
+		<li>menu2</li> <!-- $("ul>li").eq(1).click(); -->
+		<li>menu3</li> <!-- $("ul>li").eq(2).click(); -->
+	</ul>
+	<!-- .box$*3>{$. }+lorem10 -->
+	<div class="Wrap">
+		<div class="box1">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, sequi.</div>
+		<div class="box2">2. Illo ex accusantium, officia debitis aut maxime ea omnis vel.</div>
+		<div class="box3">3. Expedita sequi corrupti tempora perspiciatis, voluptatum sapiente incidunt quo, explicabo.</div>
+	</div>
+
+</body>
+</html>

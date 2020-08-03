@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>DOM03</title>
+</head>
+<body>
+	<h3>
+		내가 좋아하는 과일
+		<button type="button" onclick="change()">누르시오</button>
+	</h3>
+	Lorem ipsum dolor sit amet, <span>사과</span> adipisicing elit. <span>망고</span> totam placeat quasi omnis <span>망고스틴</span> nemo accusamus, illum repellendus, <span>두리안</span>.
+
+	<script>
+		// var span=document.getElementsByTagName("span");
+		function change(){
+			var span=document.getElementsByTagName("span");
+			for(var i=0;i<span.length;i++){
+				span[i].style.color="blue";
+				span[i].style.fontSize="2em";
+				span[i].style.fontWeigth="bold";
+				// document.getElementsByTagName("span")[i].style.color="blue";
+			}
+
+		}
+	</script>
+</body>
+</html>

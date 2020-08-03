@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		function change(){
+			var text=document.getElementById("text");
+			text.style.color="crimson";
+			text.style.background="gray";
+			alert("Hello\nIt's Me");
+			document.getElementsByTagName("body")[0].style.background="aqua"
+		}
+		function reset(){
+			var text=document.getElementById("text");
+			text.style.color="initial";
+			text.style.background="initial";
+			document.getElementsByTagName("body")[0].style.background="initial"
+		}
+	</script>
+</head>
+<body>
+	<p id="text">Hello</p>
+	<button type="button" onclick="change()">BTN1</button>
+	<button type="button" onclick="reset()">BTN2</button>
+</body>
+</html>

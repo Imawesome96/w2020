@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Gallery Practice</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.imgWrap{
+			width: 900px;height: 650px;
+			margin: 0 auto;background:lime;}
+		.imgWrap ul>li>img{
+			margin: 0 auto;padding-top: 20px;}
+		.imgWrap ul>li{
+			display: none;}
+		.thmbBoxWrap{
+			position: relative;}
+		.imgCont{
+			width: 800px;height: 100px;
+			background:crimson;margin: 0 auto;
+			margin-top:30px;overflow:hidden;
+			position: relative;}
+		.imgCont ul{
+			transition: 0.5s;width: 2400px;
+			position: absolute;}
+		.thmbBoxWrap .btn_left{
+			position: absolute;bottom: 0;top: 50%;
+			transform: translateY(-50%);left:10px;}
+		.thmbBoxWrap .btn_right{
+			position: absolute;bottom: 0;right: 0;
+			top: 50%;transform: translateY(-50%);right: 10px}
+		.imgCont>ul>li{display: block;float: left;margin-left: 16px;width: 120px;}
+		.ml0{margin-left: 0 !important;}
+
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".thmbBoxWrap>.imgCont>ul>li").click(function(){
+				var i=$(this).index();
+				console.log(i);
+				$(".imgWrap>ul>li").hide().eq(i).show();
+			});
+
+			var current=0
+			$(".btn_right").click(function(){
+				current++;
+				if(current==3){current=0};
+				console.log(current);
+				imagesMove();
+			});
+
+			$(".btn_left").click(function(){
+				current--;
+				if(current==-1){current=2};
+				console.log(current);
+				imagesMove();
+			});
+
+			function imagesMove(){
+				var Num=current*800*-1;
+				console.log(Num);
+				//$(".thmbBoxWrap>.imgCont>ul").css("left",Num);
+				$(".thmbBoxWrap>.imgCont>ul").stop().animat({left:Num},300);
+			};
+
+
+		});
+	</script>
+</head>
+<body>
+	<div class="BoxWrap">
+		<div class="imgWrap">
+			<ul>
+				<li style="display:block"><img src="images/0.jpg" alt="img0"></li>
+				<li><img src="images/1.jpg" alt="img1"></li>
+				<li><img src="images/2.jpg" alt="img2"></li>
+				<li><img src="images/3.jpg" alt="img3"></li>
+				<li><img src="images/4.jpg" alt="img4"></li>
+				<li><img src="images/5.jpg" alt="img5"></li>
+				<li><img src="images/6.jpg" alt="img6"></li>
+				<li><img src="images/7.jpg" alt="img7"></li>
+				<li><img src="images/8.jpg" alt="img8"></li>
+				<li><img src="images/9.jpg" alt="img9"></li>
+				<li><img src="images/10.jpg" alt="img10"></li>
+				<li><img src="images/11.jpg" alt="img11"></li>
+				<li><img src="images/12.jpg" alt="img12"></li>
+				<li><img src="images/13.jpg" alt="img13"></li>
+				<li><img src="images/14.jpg" alt="img14"></li>
+				<li><img src="images/15.jpg" alt="img15"></li>
+				<li><img src="images/16.jpg" alt="img16"></li>
+				<li><img src="images/17.jpg" alt="img17"></li>
+				
+			</ul>
+			<div class="thmbBoxWrap">
+				<img src="images/btn_left.gif" alt="#" class="btn_left">
+				<div class="imgCont">
+					<ul class="clearfix">
+						<li class="ml0"><img src="images/thumb0.jpg" alt="thumbimg0"></li>
+						<li><img src="images/thumb1.jpg" alt="thumbimg1"></li>
+						<li><img src="images/thumb2.jpg" alt="thumbimg2"></li>
+						<li><img src="images/thumb3.jpg" alt="thumbimg3"></li>
+						<li><img src="images/thumb4.jpg" alt="thumbimg4"></li>
+						<li><img src="images/thumb5.jpg" alt="thumbimg5"></li>
+
+						<li class="ml0"><img src="images/thumb6.jpg" alt="thumbimg6"></li>
+						<li><img src="images/thumb7.jpg" alt="thumbimg7"></li>
+						<li><img src="images/thumb8.jpg" alt="thumbimg8"></li>
+						<li><img src="images/thumb9.jpg" alt="thumbimg9"></li>
+						<li><img src="images/thumb10.jpg" alt="thumbimg10"></li>
+						<li><img src="images/thumb11.jpg" alt="thumbimg11"></li>
+
+						<li class="ml0"><img src="images/thumb12.jpg" alt="thumbimg12"></li>
+						<li><img src="images/thumb13.jpg" alt="thumbimg13"></li>
+						<li><img src="images/thumb14.jpg" alt="thumbimg14"></li>
+						<li><img src="images/thumb15.jpg" alt="thumbimg15"></li>
+						<li><img src="images/thumb16.jpg" alt="thumbimg16"></li>
+						<li><img src="images/thumb17.jpg" alt="thumbimg17"></li>
+						
+					</ul>
+				</div>
+				<img src="images/btn_right.gif" alt="#" class="btn_right">
+			</div>
+		</div>
+	</div>
+	
+		
+	
+</body>
+</html>

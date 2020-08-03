@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom04</title>
+	<style>
+		#myDiv{width: 100px;height: 100px;background: skyblue}
+	</style>
+</head>
+<body>
+	<div>안성현</div>
+	<button type="button" onclick="createDiv()">div생성</button>
+	<script>
+		function createDiv(){
+			var obj=document.getElementsByTagName("body")[0];
+			var newDiv=document.createElement("div");
+			newDiv.innerHTML="안녕하세용";
+			newDiv.setAttribute("id","myDiv");
+			newDiv.style.background="crimson";
+			newDiv.onclick=function(){
+				var p=newDiv.parentElement;
+				p.removeChild(newDiv);
+			};
+
+			obj.appendChild(newDiv);
+		}
+	</script>
+</body>
+</html>

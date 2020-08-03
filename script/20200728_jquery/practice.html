@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	
+</head>
+<body>
+	<script>
+      var i = 90;
+      document.write("점수는 " + i + "점<br>")
+      
+      if(i>=90){
+         document.write("90점이상:A<br>");
+         grade="A";
+      }else if(i>=80 && i<90){
+         document.write("80점이상:B<br>");
+         grade="B";
+      }else if(i>=70 && i<80){
+         document.write("70점이상:C<br>");
+         grade="C";
+      }else if(i>=60 && i<70){
+         document.write("60점이상:D<br>");
+         grade="D";
+      }else if(i<60){
+         document.write("60점미만:E<br>");
+         grade="E";
+      }
+
+      document.write("안성현 점수는 " + i + "점 학점은 " + grade + "입니다.")
+
+
+   </script>
+</body>
+</html>

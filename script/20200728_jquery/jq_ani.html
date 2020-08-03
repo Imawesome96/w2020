@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>jquery</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<style>
+		.nav{width: 1000px;margin:auto}
+		ul.menu li{float: left;width: 20%;height: 40px;line-height: 40px;text-align: center;border-right: 1px solid #ddd;position: relative;}
+		ul.menu li:first-child{border-left: 1px solid #ddd;}
+		ul.menu li:hover:before{content: "";display: block;width: 8px;height: 8px;border-radius: 50%;background: crimson;position: absolute;left: 50%;transform: translateX(-50%);}
+		ul.menu li:hover{background:#ddd;cursor: pointer;}
+		ul.menu li.active:before{content: "";display: block;width: 8px;height: 8px;border-radius: 50%;background: crimson;position: absolute;left: 50%;transform: translateX(-50%);}
+		.bar{width: 200px;height: 5px;background: #f00;position: relative;border-radius: 3px}
+	</style>
+
+</head>
+<body>
+	<div class="nav">
+		<ul class="menu clearfix">
+			<li class="active"><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+		<div class="bar"></div>
+	</div>
+	<script>
+		$(".menu li").mouseenter(function(){
+			var liNum=$(this).index();
+			console.log(liNum);
+			// $(".bar").css("left",liNum*200);
+			$(".bar").stop().animate({left:liNum*200},200)
+		});
+	</script>
+</body>
+</html>
