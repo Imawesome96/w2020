@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Position Practice</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+</head>
+<style>
+	html,body{height: 100%;}
+	.bgimg{width: 100%;height: 100%;background-attachment:fixed;background-position: center;background-size: cover;position: relative;}
+	.bgimg.one{background-image: url(../../images/pc01.jpg);}
+	.bgimg.two{background-image: url(../../images/pc02.jpg);}
+	.bgimg.three{background-image: url(../../images/pc03.jpg);}
+	.pgbox{width: 80px;height: 200px;background-color: lime;text-align: center;position: fixed;z-index: 1;right: 50px;top:50%;transform:translateY(-50%);}
+	.pgbox ul li a{line-height: 66.67px;border-radius: 50% 50% ;background:red}
+</style>
+<body>
+	<div class="pgbox">
+		<ul>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+			<li><a href="#">menu</a></li>
+		</ul>
+	</div>
+	<section class="bgimg one" id="">
+		
+	</section>
+	<section class="bgimg two" id="">
+		
+	</section>
+	<section class="bgimg three" id="">
+		
+	</section>
+</body>
+</html>
